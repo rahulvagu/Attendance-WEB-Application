@@ -50,8 +50,27 @@ The relational database structure ensures accurate attendance tracking and fast 
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the repository
-
+### 1️ Clone the repository
+### 2 Create Virtual Environment
+     python -m venv venv
+### 3.Install Dependencies
+    pip install -r requirements.txt
+    Database Configuration (MySQL)
+    Open MySQL and create a database:
+    CREATE DATABASE attendance_db;
+    Import the provided SQL file into the database.
+    Update your MySQL credentials in app.py:
+    mysql = MySQL(app)
+    app.config['MYSQL_HOST'] = 'localhost'
+    app.config['MYSQL_USER'] = 'your_username'
+    app.config['MYSQL_PASSWORD'] = 'your_password'
+    app.config['MYSQL_DB'] = 'attendance_db'
+### 4.Run the Application
+    python app.py
+    Open in browser:
+    http://127.0.0.1:5000
 ```bash
 git clone https://github.com/rahulvagu/Attendance-WEB-Application.git
 cd Attendance-WEB-Application
+Create Virtual Environment
+python -m venv venv
